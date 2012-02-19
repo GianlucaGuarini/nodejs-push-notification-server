@@ -1,0 +1,24 @@
+<html>
+	<head>
+	<!-- 
+	 * Author:		Gianluca Guarini
+	 * Contact: 	gianluca.guarini@gmail.com
+	 * Website:		http://www.gianlucaguarini.com/
+	 * Twitter:		@gianlucaguarini
+	-->
+		<title>Push notification server</title>
+	</head>
+	<body>
+		<div id="container">Try to change your xml data to update this content</div>
+	<script src="socket.io/socket.io.js"></script>
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script>
+	// creating a new websocket
+	  var socket = io.connect('http://localhost');
+	  // on every message recived we print the new datas inside the #container div
+	  socket.on('notification', function (data) {
+	    $('#container').html(data.sample);
+	  });
+	</script>
+	</body>
+</html>

@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <test>
-	<sample>There is no AJAX request just HTML5 websocket message</sample>
+	<sample>Hello world!</sample>
 </test>

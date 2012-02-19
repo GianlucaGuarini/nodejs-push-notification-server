@@ -28,7 +28,7 @@ io.sockets.on( 'connection', function ( socket ) {
     // on file change we can read the new xml
     fs.readFile( 'example.xml', function ( err, data ) {
       if ( err ) throw err;
-      // parsing the new xml data an converting them into json file
+      // parsing the new xml data and converting them into json file
       parser.parseString( data ); 
     });
   });

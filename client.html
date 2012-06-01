@@ -9,6 +9,7 @@
 		<title>Push notification server</title>
 	</head>
 	<body>
+		<time></time>
 		<div id="container">Try to change your xml data to update this content</div>
 	<script src="socket.io/socket.io.js"></script>
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
@@ -18,6 +19,7 @@
 	  // on every message recived we print the new datas inside the #container div
 	  socket.on('notification', function (data) {
 	    $('#container').html(data.sample);
+	    $('time').html('Last Update:' + data.time);
 	  });
 	</script>
 	</body>

@@ -28,11 +28,11 @@ io.sockets.on( 'connection', function ( socket ) {
     // on file change we can read the new xml
     fs.readFile( 'example.xml', function ( err, data ) {
       if ( err ) throw err;
-      // parsing the new xml datas and converting them into json file
+      // parsing the new xml data and converting them into json file
       parser.parseString( data );
     });
   });
-  // when the parser ends the parsing we are ready to send the new datas to the frontend
+  // when the parser ends the parsing we are ready to send the new data to the frontend
   parser.addListener('end', function( result ) {
 
     // adding the time of the last update

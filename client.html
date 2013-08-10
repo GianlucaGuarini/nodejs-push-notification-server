@@ -18,9 +18,10 @@
 	var socket = io.connect('http://localhost');
 	// on every message recived we print the new datas inside the #container div
 	socket.on('notification', function (data) {
-		$('#container').html(data.test.sample[0]);
-		$('time').html('Last Update:' + data.time);
-		console.log(data);
+		// convert the json string into a valid javascript object
+		var _data = JSON.parse(data);
+		$('#container').html(_data.test.sample);
+		$('time').html('Last Update:' + _data.time);
 	});
 	</script>
 	</body>

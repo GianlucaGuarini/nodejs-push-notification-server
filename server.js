@@ -1,14 +1,12 @@
 var app = require('http').createServer(handler),
   io = require('socket.io').listen(app),
-  xml2js = require('xml2js'),
-  parser = new xml2js.Parser(),
+  parser = new require('xml2json'),
   fs = require('fs');
 
 // creating the server ( localhost:8000 ) 
 app.listen(8000);
 
 // on server started we can load our client.html page
-
 function handler(req, res) {
   fs.readFile(__dirname + '/client.html', function(err, data) {
     if (err) {
@@ -30,14 +28,12 @@ io.sockets.on('connection', function(socket) {
     fs.readFile(__dirname + '/example.xml', function(err, data) {
       if (err) throw err;
       // parsing the new xml data and converting them into json file
-      parser.parseString(data);
+      var json = parser.toJson(data);
+      // adding the time of the last update
+      json.time = new Date();
+      // send the new data to the client
+      socket.volatile.emit('notification', json);
     });
   });
-  // when the parser ends the parsing we are ready to send the new data to the frontend
-  parser.addListener('end', function(result) {
 
-    // adding the time of the last update
-    result.time = new Date();
-    socket.volatile.emit('notification', result);
-  });
 });

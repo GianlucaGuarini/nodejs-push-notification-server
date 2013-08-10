@@ -3,9 +3,9 @@
   "version": "0.1.3",
   "description": "This is a simple example using nodejs to build a push notification server.",
   "main": "server.js",
-  "engineStrict":true,
-  "engines":{
-    "node" : ">=0.6.27 <0.10.0"
+  "engineStrict": true,
+  "engines": {
+    "node": "0.10.8"
   },
   "dependencies": {
     "socket.io": "~0.9.16",
@@ -22,8 +22,6 @@
   },
   "author": "Gianluca Guarini",
   "license": "MIT",
-  "readmeFilename": "README",
-  "gitHead": "586dc683b72a6839f3ac9730f044ea33685a4531",
   "bugs": {
     "url": "https://github.com/GianlucaGuarini/nodejs-push-notification-server/issues"
   }

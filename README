@@ -1,6 +1,8 @@
 This is a simple example using nodejs to build a push notification server.
 You can read the tutorial on my blog http://www.gianlucaguarini.com/blog/?p=272
 
+Tested on node 0.10.8
+
 /**
  *
  * Version:     0.1.3

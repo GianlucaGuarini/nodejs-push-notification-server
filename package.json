@@ -3,6 +3,10 @@
   "version": "0.1.3",
   "description": "This is a simple example using nodejs to build a push notification server.",
   "main": "server.js",
+  "engineStrict":true,
+  "engines":{
+    "node" : ">=0.6.27 <0.10.0"
+  },
   "dependencies": {
     "socket.io": "~0.9.16",
     "xml2json": "~0.3.2"

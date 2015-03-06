@@ -3,8 +3,10 @@ var app = require('http').createServer(handler),
   parser = new require('xml2json'),
   fs = require('fs');
 
-// creating the server ( localhost:8000 ) 
+// creating the server ( localhost:8000 )
 app.listen(8000);
+
+console.log('server listening on localhost:8000');
 
 // on server started we can load our client.html page
 function handler(req, res) {
@@ -29,8 +31,6 @@ io.sockets.on('connection', function(socket) {
       if (err) throw err;
       // parsing the new xml data and converting them into json file
       var json = parser.toJson(data);
-      // adding the time of the last update
-      json.time = new Date();
       // send the new data to the client
       socket.volatile.emit('notification', json);
     });

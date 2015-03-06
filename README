@@ -1,17 +1,17 @@
 This is a simple example using nodejs to build a push notification server.
 You can read the tutorial on my blog http://www.gianlucaguarini.com/blog/?p=272
 
-Tested on node 0.10.8
+Tested on node 0.12.0
 
 /**
  *
- * Version:     0.1.4
+ * Version:     1.0.0
  * Author:      Gianluca Guarini
  * Contact:     gianluca.guarini@gmail.com
  * Website:     http://www.gianlucaguarini.com/
  * Twitter:     @gianlucaguarini
  *
- * Copyright (c) 2013 Gianluca Guarini
+ * Copyright (c) Gianluca Guarini
  *
  * Permission is hereby granted, free of charge, to any person
  * obtaining a copy of this software and associated documentation

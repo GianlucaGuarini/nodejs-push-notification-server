@@ -1,6 +1,6 @@
 {
   "name": "nodejs-push-notification-server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This is a simple example using nodejs to build a push notification server.",
   "main": "server.js",
   "dependencies": {

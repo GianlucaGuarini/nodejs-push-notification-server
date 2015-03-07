@@ -25,7 +25,7 @@ function handler(req, res) {
 io.sockets.on('connection', function(socket) {
   console.log(__dirname);
   // watching the xml file
-  fs.watch(__dirname + '/example.xml', function(curr, prev) {
+  fs.watchFile(__dirname + '/example.xml', function(curr, prev) {
     // on file change we can read the new xml
     fs.readFile(__dirname + '/example.xml', function(err, data) {
       if (err) throw err;
